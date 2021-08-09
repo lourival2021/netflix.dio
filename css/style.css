@@ -1,0 +1,201 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--preta);
+    font-family: sans-serif;
+    color: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    top: 28px;
+    left: 56px;
+}
+
+.header a {
+    display: inline-block;
+    background: #e50914;
+    color: white;
+    align-self: flex-start;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.main {
+    padding-top: 4rem;
+    height: 620px;
+    background: url("../img/bg.jpg") center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-child {
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+}
+
+.main h1 {
+    font-size: 50px;
+    max-width: 80%;
+}
+
+.main span {
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+.main p {
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.gradient {
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form-letsgo {
+    display: grid;
+    grid-template-columns: 400px 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.form-letsgo input {
+    padding: 15px 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.form-letsgo button {
+    background: #e50914;
+    outline: none;
+    font-size: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form-letsgo button::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: url("../img/seta.svg");
+    margin-left: 20px;
+}
+
+.form-letsgo button:hover {
+    background: #f40612;
+}
+
+.footer .form-letsgo {
+    margin-top: 0;
+}
+
+.footer {
+    padding: 4rem 0 2rem 0;
+    border-top: 8px solid #222;
+    background: black;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+}
+
+.footer p {
+    margin-top: 2rem;
+    color: #757575;
+    font-size: 13px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.mini1 {
+    height: 100%;
+    width: 100%;
+    padding: 8px 6px;
+    background: #f40612;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #555;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mini1:hover {
+    background: #ff3d47;
+    transition: background 1s;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+.mark-info {
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .main h1 {
+        font-size: 23px;
+        max-width: 510px;
+    }
+    .main span {
+        font-size: 22px;
+        max-width: 510px;
+    }
+    .main p {
+        font-size: 15px;
+        max-width: 510px;
+    }
+    .header {
+        max-width: 75%;
+    }
+    .form-letsgo {
+        grid-template-columns: 250px 130px;
+        margin-top: 25px;
+    }
+    .form-letsgo input {
+        padding: 15px 10px;
+        font-size: 75%;
+    }
+    .form-letsgo button {
+        font-size: 100%;
+    }
+}
